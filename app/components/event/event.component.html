@@ -1,0 +1,14 @@
+<DockLayout class="item item-icon-left" stretchLastChild="true">
+  <StackLayout dock="left" width="80">
+    <label [ngClass]="getEventClasses()" [text]="getEventIconChar()"></label>
+  </StackLayout>
+
+  <StackLayout dock="right">
+    <label class="small" [text]="event.date | amDateFormat:'hh:mmA'"></label>
+    <label class="h2" [text]="event.title"></label>
+
+    <StackLayout *ngFor="let item of event.content; trackBy: item">
+      <label [text]="item"></label>
+    </StackLayout>
+  </StackLayout>
+</DockLayout>

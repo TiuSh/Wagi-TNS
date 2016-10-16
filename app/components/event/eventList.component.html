@@ -1,0 +1,7 @@
+<ListView class="listview" [items]="events">
+  <template let-event="item">
+    <GridLayout columns="*">
+      <event col="0" [data]="event"></event>
+    </GridLayout>
+  </template>
+</ListView>
